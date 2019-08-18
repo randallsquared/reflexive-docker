@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  goplay:
+    image: dev
+    build: 
+      context: .
+      target: dev
+      args:
+        - DEVELOPING_APP
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/go/src/${DEVELOPING_APP}
