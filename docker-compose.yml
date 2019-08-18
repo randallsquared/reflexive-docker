@@ -7,8 +7,8 @@ services:
       context: .
       target: dev
       args:
-        - DEVELOPING_APP
+        - APP_NAME
     ports:
       - 3000:3000
     volumes:
-      - .:/go/src/${DEVELOPING_APP}
+      - .:/go/src/${APP_NAME}
